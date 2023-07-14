@@ -13,10 +13,10 @@ const CourseChapter =() =>{
     return (
         <div className="coursechapter-container">
             <div className="container-1">
-                <h1>Hello World</h1>
+                <h1 className="course-title">Hello World</h1>
                 <p>This lesson gets you acquanited with the hello world program in peral</p>
                 <div className="cover-following">
-                    <h2 onClick={()=>handleToggle()}> {isOpen ? '▼' : '▶'}We'll cover the following </h2>
+                    <h2 onClick={()=>handleToggle()}> {isOpen ? '▼' : '▶'} We'll cover the following </h2>
                     {isOpen && 
                     <div>
                         <ul>
@@ -28,7 +28,7 @@ const CourseChapter =() =>{
                 </div>
             </div>
             <div>
-                <h1>Syntax</h1>
+                <h1 className="course-title">Syntax</h1>
                 <p>Try Running the code below</p>
                 <div>
                     <CodeBlocks code={code1} language={language} />
@@ -45,7 +45,7 @@ const CourseChapter =() =>{
                 </p>
             </div>
             <div>
-                <h1>Key takeaways</h1>
+                <h1 className="course-title">Key takeaways</h1>
                 <ul>
                     <li>print or printf keyword is used to display text</li>
                     <li>Any text that we want to print goes in pair of double quotes " "</li>
