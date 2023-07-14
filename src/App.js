@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Sidebar from "./components/Sidebar";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Body from './components/Body'
+import Details from './components/Details'
+import CourseChapter from './components/CourseChapter'
+import React from 'react';
+import './index.css';
+import {createBrowserRouter,Outlet} from 'react-router-dom'
 
-function App() {
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="container">
+      <div class="navbar">
+        <Navbar />
+      </div>
+      <div class="body-wrapper">
+        <div class="sidebar">
+          <Sidebar />
+        </div>
+        <div class="body">
+          <Outlet/>
+        </div>
+      </div>
+      <footer class="footer">
+        <Footer />
+      </footer>
     </div>
   );
 }
-
-export default App;
+export const appRouter = createBrowserRouter([
+  {
+    path:'/',
+    element:<App/>,
+    children:[
+      {
+        path:'/',
+        element:<Body/>,
+      },
+      {
+        path:'/details',
+        element:<Details/>
+      },
+      {
+        path:'/Chapter',
+        element:<CourseChapter/>
+      }
+    ]
+  }
+])

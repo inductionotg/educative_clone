@@ -1,0 +1,33 @@
+.hero-banner{
+  height: 230px;
+  background:rgb(3,35,65);
+  margin: -3px -20px 0;
+}
+
+.takeaway-section{
+  background-color: #EEF7FF;
+  margin: 0 -20px;
+}
+
+.takeaway-section h4 {
+  padding: 15px 20px;
+  font-size: 28px;
+  text-align:center
+  
+}
+
+.course-overview {
+  width: 70%;
+}
+
+.course-overview p {
+  margin-left: 20px;
+}
+.course-overview h4 {
+  padding: 0 15px;
+}
+
+.course-title {
+  font-size: 28px;
+  padding: 15px 0;
+}
